@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.sfondoBianco{
+    background-color: white;
+    height: 100vh;
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    margin: 1%;
+}
+.contenitorePrincipale{
+    height: 60vh;
+    background-color: #003F3F !important;
+    
+}
+.paragrafoPrincipale{
+    
+    font-size: 40px;
+    text-align: center;
+    margin: 0% 5%;
+}
+.card{
+    height: 350px;
+    width: 250px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    background-image: url(src\assets\ImmagineStrana.png);
+    background-size:  250px 90px;
+    background-repeat: no-repeat;
+    color: black;
+    margin: 0px 40px;
+    box-shadow: 25px 33px 22px 0px rgba(0, 0, 0, 0.426);
+    margin-bottom: 40px;
+}
+.imgCard{
+    border-radius: 15px;
+    height: 100px;
+    width: 250px;
+    
+}
+.buttonContainer{
+    
+    display: flex;
+    margin-top: 100px;
+    width: 250px;
+    height: 130px;
+    justify-content: center;
+    align-items: center;
+    margin: -15px;
+
+}
+a{
+    background-color: #00C3C3;
+    width: 70px;
+    height: 30px;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+
+}
+.bodyCard{
+ margin: 15px;
+ display: flex;
+ flex-direction: column;
+ 
+ 
+}
+h2{
+    margin-bottom: 10px;
+}
+
+.contenitoreDelleCard{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
