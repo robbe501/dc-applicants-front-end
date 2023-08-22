@@ -1,0 +1,89 @@
+.background-text {
+  background: #003f3f;
+  height: 75vh;
+  width: 100%;
+}
+
+.text {
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 1125px;
+}
+
+button {
+  padding: 15px 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #00c3c3;
+  border: 0px;
+  color: #003f3f;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.background-form {
+  width: 100%;
+  height: 1048px;
+}
+
+.titolo {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: black;
+  width: 1125px;
+  margin: auto;
+}
+
+.container-form {
+  width: 900px;
+  height: auto;
+  border: 2px solid #c7c7c7;
+  background: #fff;
+  margin: auto;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+input{
+  width: 100%;
+  height: 45px;
+  color: black;
+  font-size: 20px;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+
+textarea{
+  width: 100%;
+  background-color: rgb(230, 230, 230);
+  color: black;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+label{
+  color: black;
+  font-size: 25px;
+}
+
+.riga{
+  text-align:center;
+  padding-bottom: 20px;
+}
+
+.form{
+  width: 85%;
+}
+
+/*  */
