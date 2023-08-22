@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { DatiTest } from './dati-test';
+import { Output } from '@angular/core';
 
 @Component({
   selector: 'app-svolgimento-test',
@@ -8,6 +9,7 @@ import { DatiTest } from './dati-test';
 })
 export class SvolgimentoTestComponent {
 
+  @Output() arrayRisposte = new EventEmitter<String[]>();
 
   pagina:number = 0
   datiTest:DatiTest= {
@@ -69,6 +71,7 @@ export class SvolgimentoTestComponent {
   riepilogoButton(){
     this.aggiungiRisposta()
     console.log(this.risposteSelezionate)
+    this.arrayRisposte.emit(this.risposteSelezionate)
   }
     
   }
