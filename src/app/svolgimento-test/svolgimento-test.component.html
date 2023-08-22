@@ -16,221 +16,43 @@
             <p>Bentornato Filippo</p>
         </div>
         
-            
-      
-    
         <div class="contenitoreDelleCard">
     
             <div class="card">
                     <div class="domanda">
-                    
-
+                
                     </div>
 
-                    
-                    
-                    
-                    <form >   
-                        <p class="domanda">Please select your favorite Web language:</p>
+                    <form>   
+                        <p class="domanda">{{domanda}}</p>
                         <div class="listaRisposte">
-
-                               <label  class="inputRisposte" for="html">A. </label>
-                               <input  class="inputRisposte" type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 1</label>
-                               
-
+                            
+                               <label  class="inputRisposte" for="risposta0">A. </label>
+                               <input  class="inputRisposte" type="radio" id="risposta0" name="fav_language" value="{{risposte[0]}}" [(ngModel)]="rispostaSelezionata">
+                               <label  class="inputRisposte" for="risposta0">{{risposte[0]}}</label>
+                            
                                 <br> 
-                                <label  class="inputRisposte"  for="html">B. </label>
-                               <input  class="inputRisposte" type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 2</label>
+                                <label  class="inputRisposte"  for="risposta1">B. </label>
+                               <input  class="inputRisposte" type="radio" id="risposta1" name="fav_language" value="{{risposte[1]}}" [(ngModel)]="rispostaSelezionata">
+                               <label  class="inputRisposte" for="risposta1">{{risposte[1]}}</label>
                                 <br> 
 
-                                <label  class="inputRisposte"  for="html">C. </label>
-                               <input class="inputRisposte" type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 3</label>
+                                <label  class="inputRisposte"  for="risposta2">C. </label>
+                               <input class="inputRisposte" type="radio" id="risposta2" name="fav_language" value="{{risposte[2]}}" [(ngModel)]="rispostaSelezionata">
+                               <label  class="inputRisposte" for="risposta2">{{risposte[2]}}</label>
                                <br> 
-                               <label  class="inputRisposte"  for="html">D. </label>
-                               <input type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 4</label>
+                               <label  class="inputRisposte"  for="risposta3">D. </label>
+                               <input type="radio" id="risposta3" name="fav_language" value="{{risposte[3]}}" [(ngModel)]="rispostaSelezionata">
+                               <label  class="inputRisposte" for="risposta3">{{risposte[3]}}</label>
                         </div>
                     </form>
     
-                    
-
-                   <div class="bottoni">
-                    <button class="buttonIndietro" type="button">Indietro</button>
-                    <button  type="button">Avanti</button>
-
-                   </div>
-                   
-                    
-                
-              </div>
-    
-              
-    
-        </div>
-
-        <div class="contenitoreDelleCard">
-    
-            <div class="card">
-                    <div class="domanda">
-                    
-
+                    <div class="bottoni">
+                        <button (click)="previousQuestion()" class="buttonIndietro" type="button">Indietro</button>
+                        <button *ngIf="pagina < 3" (click)="nextQuestion()"  type="button">Avanti</button>
+                        <button *ngIf="pagina > 2" (click)="riepilogoButton()" routerLink="/riepilogo-test" type="button">Riepilogo</button>
                     </div>
-
-                    
-                    
-                    
-                    <form >   
-                        <p class="domanda">Please select your favorite Web language:</p>
-                        <div class="listaRisposte">
-
-                               <label  class="inputRisposte" for="html">A. </label>
-                               <input  class="inputRisposte" type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 1</label>
-                               
-
-                                <br> 
-                                <label  class="inputRisposte"  for="html">B. </label>
-                               <input  class="inputRisposte" type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 2</label>
-                                <br> 
-
-                                <label  class="inputRisposte"  for="html">C. </label>
-                               <input class="inputRisposte" type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 3</label>
-                               <br> 
-                               <label  class="inputRisposte"  for="html">D. </label>
-                               <input type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 4</label>
-                        </div>
-                    </form>
-    
-                    
-
-                   <div class="bottoni">
-                    <button class="buttonIndietro" type="button">Indietro</button>
-                    <button  type="button">Avanti</button>
-
-                   </div>
-                   
-                    
-                
               </div>
-    
-              
-    
         </div>
 
-        <div class="contenitoreDelleCard">
-    
-            <div class="card">
-                    <div class="domanda">
-                    
-
-                    </div>
-
-                    
-                    
-                    
-                    <form >   
-                        <p class="domanda">Please select your favorite Web language:</p>
-                        <div class="listaRisposte">
-
-                               <label  class="inputRisposte" for="html">A. </label>
-                               <input  class="inputRisposte" type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 1</label>
-                               
-
-                                <br> 
-                                <label  class="inputRisposte"  for="html">B. </label>
-                               <input  class="inputRisposte" type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 2</label>
-                                <br> 
-
-                                <label  class="inputRisposte"  for="html">C. </label>
-                               <input class="inputRisposte" type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 3</label>
-                               <br> 
-                               <label  class="inputRisposte"  for="html">D. </label>
-                               <input type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 4</label>
-                        </div>
-                    </form>
-    
-                    
-
-                   <div class="bottoni">
-                    <button class="buttonIndietro" type="button">Indietro</button>
-                    <button  type="button">Avanti</button>
-
-                   </div>
-                   
-                    
-                
-              </div>
-    
-              
-    
-        </div>
-
-
-        <div class="contenitoreDelleCard">
-    
-            <div class="card">
-                    <div class="domanda">
-                    
-
-                    </div>
-
-                    
-                    
-                    
-                    <form >   
-                        <p class="domanda">Please select your favorite Web language:</p>
-                        <div class="listaRisposte">
-
-                               <label  class="inputRisposte" for="html">A. </label>
-                               <input  class="inputRisposte" type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 1</label>
-                               
-
-                                <br> 
-                                <label  class="inputRisposte"  for="html">B. </label>
-                               <input  class="inputRisposte" type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 2</label>
-                                <br> 
-
-                                <label  class="inputRisposte"  for="html">C. </label>
-                               <input class="inputRisposte" type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 3</label>
-                               <br> 
-                               <label  class="inputRisposte"  for="html">D. </label>
-                               <input type="radio" id="html" name="fav_language" value="HTML">
-                               <label  class="inputRisposte" for="html">domanda 4</label>
-                        </div>
-                    </form>
-    
-                    
-
-                   <div class="bottoni">
-                    <button class="buttonIndietro" type="button">Indietro</button>
-                    <button  type="button">Avanti</button>
-
-                   </div>
-                   
-                    
-                
-              </div>
-    
-              
-    
-        </div>
-        
-        
-      
-    
-    </div>
-    
-</div>
+       
