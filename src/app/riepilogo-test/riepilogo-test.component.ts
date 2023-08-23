@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RisposteSelezionateService } from '../risposte-selezionate.service';
 
 @Component({
   selector: 'app-riepilogo-test',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./riepilogo-test.component.css']
 })
 export class RiepilogoTestComponent {
+  constructor(private rs: RisposteSelezionateService){}
+  svuotaRisposte(){
+    this.rs.risposteSelezionate = []
 
+  }
 }
