@@ -1,4 +1,4 @@
-interface Candidato {
+export interface Candidato {
     candidatoId: number;
     codiceFiscale: string;
     nome: string;

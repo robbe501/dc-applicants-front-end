@@ -1,1 +1,17 @@
-<p>filter-table works!</p>
+<div class="card">
+    <p-table [value]="candidati" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Nominativo</th>
+                <th>Recapito Telefonico</th>
+                <th>Esito Test</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-candidato>
+            <tr>
+                <td>{{ candidato.nome }}</td>
+                <td>{{ candidato.recapitoMobile }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

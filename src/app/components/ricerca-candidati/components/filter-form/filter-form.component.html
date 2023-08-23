@@ -1,35 +1,58 @@
-<form class="max-w-4xl" [formGroup]="filterForm" (ngSubmit)="onSubmit()">
-  <div class="flex flex-wrap -mx-3 mb-6 text-black">
-    <div class=" p-4">
-        <input class="appearance-none block w-full  border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid" id="grid-last-name" type="text" placeholder="Nominativo" formControlName="nominativo">
+<h1 class="text-3xl font-bold underline">   Hello world! </h1>
+<form [formGroup]="filterForm" (ngSubmit)="onSubmit()">
+  <div class="grid lg:grid-cols-4 md:grid-cols-3 mb-6 text-black">
+    <div class="p-4">
+        <span class="p-float-label" >
+            <input pInputText id="Nominativo" formControlName="nome" />
+            <label htmlFor="name" >Nominativo</label>
+        </span>
     </div>
-    <div class=" p-4">
-        <input class="appearance-none block w-full  border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid" id="grid-last-name" type="text" placeholder="Residenza" formControlName="residenza">
+    <div class="p-4">
+      <input
+        class="appearance-none border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid"
+        id="grid-last-name"
+        type="text"
+        placeholder="Residenza"
+        formControlName="residenza"
+      />
     </div>
-    <div class=" p-4">
-        <input class="appearance-none block w-full  border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid" id="grid-last-name" type="text" placeholder="Laurea" formControlName="laurea">
+    <div class="p-4">
+        <p-dropdown formControlName="laurea" [options]="enums.laurea" optionLabel="name"></p-dropdown>
     </div>
-    <div class=" p-4">
-        <input class="appearance-none block w-full  border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid" id="grid-last-name" type="text" placeholder="Diploma" formControlName="diploma">
+    <div class="p-4">
+        <p-dropdown formControlName="diploma" [options]="enums.diploma" optionLabel="name"></p-dropdown>
+
     </div>
-    <div class=" p-4">
-        <input class="appearance-none block w-full  border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid" id="grid-last-name" type="text" placeholder="Certificazione" formControlName="certificazione">
+    <div class="p-4">
+      <p-dropdown formControlName="certificazione" [options]="enums.certificazione" optionLabel="name"></p-dropdown>
     </div>
-    <div class=" p-4">
-        <input class="appearance-none block w-full  border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid" id="grid-last-name" type="text" placeholder="Tipologia contratto" formControlName="tipologiaContratto">
+    <div class="p-4">
+        <p-dropdown formControlName="contratto" [options]="enums.contratto" optionLabel="name"></p-dropdown>
     </div>
-    <div class=" p-4">
-        <input class="appearance-none block w-full  border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid" id="grid-last-name" type="text" placeholder="RAL" formControlName="ral">
+    <div class="p-4">
+      <input
+        class="appearance-none border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid"
+        id="grid-last-name"
+        type="text"
+        placeholder="RAL"
+        formControlName="ral"
+      />
     </div>
-    <div class=" p-4">
-        <input class="appearance-none block w-full  border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid" id="grid-last-name" type="text" placeholder="Tariffa" formControlName="tariffa">
+    <div class="p-4">
+      <input
+        class="appearance-none border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid"
+        id="grid-last-name"
+        type="text"
+        placeholder="Tariffa"
+        formControlName="tariffaGiornalieraNetta"
+      />
     </div>
-    <div class=" p-4">
-        <input class="appearance-none block   border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid" id="grid-last-name" type="text" placeholder="Esito test" formControlName="esitoTest">
+    <div class="p-4">
+        <p-dropdown formControlName="esitoTest" [options]="enums.esito" optionLabel="name"></p-dropdown>
+
     </div>
-    <div class=" p-4 w-full">
-        <button pButton pRipple label="Submit" class="p-button-success"></button>
+    <div class="p-4 lg:col-end-5 md:col-end-2">
+      <button pButton pRipple label="Submit" class="p-button-success"></button>
     </div>
   </div>
-
 </form>
