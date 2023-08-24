@@ -1,6 +1,4 @@
 
-       
-
 <div class="sfondoBianco">
     <div class="contenitorePrincipale">
         <div class="logo">
@@ -24,24 +22,23 @@
                 
                     </div>
 
-                    <form>   
-                        <h2 class="scrittaRiepilogo">Riepilogo</h2>
-                        <div class="listaRisposte">
-                            
-                            <h2>domanda 1 hai risposto</h2>
-                            <h2>domanda 2 hai risposto</h2>
-                            <h2>domanda 3 hai risposto</h2>
-                            <h2>domanda 4 hai risposto</h2>
-                            
-                               
+                    <form>
+                        <div class="form-wrapper">
+                            <h2 class="scrittaRiepilogo">Riepilogo</h2>
+                            <div class="listaRisposte">
+                              <ng-container *ngFor="let risposta of rs.risposteSelezionate; let i = index">
+                                <p class="domandeRisposte larga">{{ i + 1 }}: {{ risposta }}</p>
+                              </ng-container>
+                            </div>
+                            <!-- Rimuovi questo pulsante se il metodo non è definito -->
+                            <button class="buttonIndietro" (click)="svuotaRisposte()" routerLink="/svolgimento-test" type="button">Torna al quiz</button> 
+
                         </div>
-                    </form>
+                      </form>
+                      
+                      
+                      
     
-                    <div class="bottoni">
-                        <button class="buttonIndietro" (click)="svuotaRisposte()" routerLink="/svolgimento-test" type="button">Torna al quiz</button>
-                        <button  type="button">Conferma</button>
-                        
-                    </div>
               </div>
         </div>
 

@@ -11,64 +11,74 @@ export class SvolgimentoTestComponent {
 
   @Output() arrayRisposte = new EventEmitter<String[]>();
 
-  constructor(private rs: RisposteSelezionateService){}
+  constructor(private rs: RisposteSelezionateService) {}
+
   pagina:number = 0
-  datiTest:DatiTest= {
-    domanda0:'Come ti chiami?',
-    risposte0: ['Francesco', 'Andrea', 'Michele', 'Federico'],
-    domanda1: 'Qual è il tuo cognome',
-    risposte1: ['Roberto', 'Giovanni', 'Fabrizio', 'Simone'],
-    domanda2: 'Quanto fa 2+2?',
-    risposte2: ['5','4', '3', '1'],
-    domanda3: 'Cosa fa un programmatore?',
-    risposte3: ['Munge le mucche', 'Annaffia le piante', 'Programma', 'Gioca a calcio']
-  }
+  datiTest: DatiTest = {
+    test_id: 1, 
+    tipologia: 'basic', 
+    domande: [
+      {
+        domanda: 'Come ti chiami?',
+        risposte: ['Francesco', 'Andrea', 'Michele', 'Federico'],
+        risposta_corretta: 'Francesco',
+      },
+      {
+        domanda: 'Qual è il tuo cognome',
+        risposte: ['Roberto', 'Giovanni', 'Fabrizio', 'Simone'],
+        risposta_corretta: 'Roberto',
+      },
+      {
+        domanda: 'Quanto fa 2+2?',
+        risposte: ['5', '4', '3', '1'],
+        risposta_corretta: '4',
+      },
+      {
+        domanda: 'Cosa fa un programmatore?',
+        risposte: [
+          'Munge le mucche',
+          'Annaffia le piante',
+          'Programma',
+          'Gioca a calcio',
+        ],
+        risposta_corretta: 'Programma',
+      },
+    ],
+  };
+
   rispostaSelezionata: string = '';
   
-  domanda:string= this.datiTest.domanda0
-  risposte:string[] = this.datiTest.risposte0
+  domanda: string = this.datiTest.domande[this.pagina].domanda;
+  risposte: string[] = this.datiTest.domande[this.pagina].risposte;
   
-   previousQuestion(){
-    if(this.pagina == 1){
-      this.domanda = this.datiTest.domanda0
-      this.risposte = this.datiTest.risposte0
-      this.pagina = this.pagina -1
-      this.rs.risposteSelezionate.pop()
-    }  else  if(this.pagina == 2){
-      this.domanda = this.datiTest.domanda1
-      this.risposte = this.datiTest.risposte1
-      this.pagina = this.pagina -1
-      this.rs.risposteSelezionate.pop()
-    }   else  if(this.pagina == 3){
-      this.domanda = this.datiTest.domanda2
-      this.risposte = this.datiTest.risposte2
-      this.pagina = this.pagina -1
-      this.rs.risposteSelezionate.pop()
-    }   
-        } 
-  
-  
-  nextQuestion(){if(this.pagina == 0){
-    this.domanda = this.datiTest.domanda1
-    this.risposte = this.datiTest.risposte1
-    this.pagina = this.pagina +1}
-    else if(this.pagina == 1){
-      this.domanda = this.datiTest.domanda2
-      this.risposte = this.datiTest.risposte2
-      this.pagina = this.pagina +1}
-    else if(this.pagina == 2){
-        this.domanda = this.datiTest.domanda3
-        this.risposte = this.datiTest.risposte3
-        this.pagina = this.pagina +1}
-        this.aggiungiRisposta()
-
+  previousQuestion() {
+    if (this.pagina > 0) {
+      this.pagina = this.pagina - 1;
+      this.domanda = this.datiTest.domande[this.pagina].domanda;
+      this.risposte = this.datiTest.domande[this.pagina].risposte;
+      this.rs.popLastRisposta(); // Usa il metodo del servizio per rimuovere l'ultima risposta
+    }
   }
+  
+  
+  
+  nextQuestion() {
+    if (this.pagina < this.datiTest.domande.length - 1) { // Verifica se non siamo già all'ultima domanda
+      this.pagina = this.pagina + 1; // Aumenta l'indice della pagina per passare alla domanda successiva
+      this.domanda = this.datiTest.domande[this.pagina].domanda; // Aggiorna il testo della nuova domanda corrente
+      this.risposte = this.datiTest.domande[this.pagina].risposte; // Aggiorna le risposte corrispondenti alla nuova domanda
+      this.aggiungiRisposta(); // Aggiungi la risposta selezionata alla lista
+    }
+  }
+  
+  
   aggiungiRisposta() {
     if (this.rispostaSelezionata) {
       this.rs.risposteSelezionate.push(this.rispostaSelezionata);
       this.rispostaSelezionata = ''; // Resetta la risposta selezionata
     }
   }
+  
   riepilogoButton(){
     this.aggiungiRisposta()
   }

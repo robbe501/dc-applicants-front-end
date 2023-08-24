@@ -4,10 +4,17 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RisposteSelezionateService {
+  risposteSelezionate: string[] = [];
 
-  risposteSelezionate:string[]=[]
-  constructor() { 
-    setInterval(()=>console.log(this.risposteSelezionate), 4000)
-    
+  constructor() {}
+
+  popLastRisposta() {
+    if (this.risposteSelezionate.length > 0) {
+      this.risposteSelezionate.pop();
+    }
   }
+
+  
+
+
 }

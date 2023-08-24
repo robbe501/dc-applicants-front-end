@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RisposteSelezionateService } from '../risposte-selezionate.service';
 
 @Component({
@@ -6,10 +6,15 @@ import { RisposteSelezionateService } from '../risposte-selezionate.service';
   templateUrl: './riepilogo-test.component.html',
   styleUrls: ['./riepilogo-test.component.css']
 })
-export class RiepilogoTestComponent {
-  constructor(private rs: RisposteSelezionateService){}
-  svuotaRisposte(){
-    this.rs.risposteSelezionate = []
+export class RiepilogoTestComponent implements OnInit {
+  
+  constructor(public rs: RisposteSelezionateService) {} 
 
+  ngOnInit(): void {
+    
+  }
+
+  svuotaRisposte(){
+    this.rs.risposteSelezionate = [];
   }
 }
