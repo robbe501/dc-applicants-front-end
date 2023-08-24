@@ -66,3 +66,47 @@ input{
   width: 150px;
   background-color: rgb(170, 170, 170);
 }
+
+.flex-input{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.input{
+  width: 350px;
+  height: 50px;
+  padding-left: 20px;
+  border: 0px;
+  border-bottom: 2px solid rgb(170, 170, 170);
+  font-size: 16px;
+  background-color: #e6e6e6;
+}
+
+.radio-section{
+  width: 400px;
+}
+
+button {
+  padding: 15px 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #00c3c3;
+  border: 0px;
+  color: #003f3f;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+
+form{
+  padding-top: 40px;
+  width: 850px;
+  margin:auto;
+}
