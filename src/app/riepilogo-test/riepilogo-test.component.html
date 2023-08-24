@@ -1,8 +1,8 @@
 
 <div class="sfondoBianco">
     <div class="contenitorePrincipale">
-        <div class="logo">
-            <svg width="244" height="134" viewBox="0 0 244 134" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <div (click)="svuotaRisposte()" routerLink="/test-home" class="logo">
+            <svg  width="244" height="134" viewBox="0 0 244 134" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect width="244" height="134" fill="url(#pattern0)"/>
                 <defs>
                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -35,7 +35,8 @@
                               <button class="buttonIndietro" (click)="svuotaRisposte()" routerLink="/svolgimento-test" type="button">Torna al quiz</button> 
 
                             <app-popup *ngIf="popupVisible"></app-popup>
-                            <button class="buttonConferma" (click)="conferma(); calcolaPercentualeCorrette();" type="button">Conferma quiz</button> 
+                            <p class="alert" *ngIf="alert">Non hai risposto a tutte le domande!</p>
+                            <button class="buttonConferma" (click)="calcolaPercentualeCorrette();" type="button">Conferma quiz</button> 
 
                             </div> 
 

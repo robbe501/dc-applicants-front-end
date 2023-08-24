@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RisposteSelezionateService } from '../risposte-selezionate.service';
 
 @Component({
@@ -6,21 +6,15 @@ import { RisposteSelezionateService } from '../risposte-selezionate.service';
   templateUrl: './riepilogo-test.component.html',
   styleUrls: ['./riepilogo-test.component.css']
 })
-export class RiepilogoTestComponent implements OnInit {
+export class RiepilogoTestComponent{
   
   constructor(public rs: RisposteSelezionateService) {
   } 
  
   
   popupVisible = false;
-
-  conferma() {
-    this.popupVisible = true;
-  }
+  alert:boolean=false
   
-  ngOnInit(): void {
-    
-  }
 
   svuotaRisposte(){
     this.rs.risposteSelezionate = [];
@@ -28,8 +22,9 @@ export class RiepilogoTestComponent implements OnInit {
   
   calcolaPercentualeCorrette(){
     if (this.rs.risposteSelezionate.length !== this.rs.risposteCorrette.length) {
+      this.alert = true
       throw new Error("non hai risposto a tutte le domande");
-    }
+    } else this.popupVisible = true;
 
     const totali = this.rs.risposteSelezionate.length;
     let corrette = 0;

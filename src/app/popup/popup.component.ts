@@ -9,7 +9,7 @@ import { RisposteSelezionateService } from '../risposte-selezionate.service';
 export class PopupComponent {
    percentualeCorrette:number=0;
   constructor(public rs: RisposteSelezionateService) {
-    this.rs.percentualeCorrette=this.percentualeCorrette
+    this.percentualeCorrette=this.rs.percentualeCorrette
   } 
  
 }

@@ -19,13 +19,17 @@ export class SvolgimentoTestComponent {
       this.dati = data});
      setTimeout(()=>  {this.domanda = this.dati[this.rs.test].domande[this.pagina].domanda
       this.risposte= this.dati[this.rs.test].domande[this.pagina].risposte;
-    console.log(this.risposte)},100) ;
+      this.rs.ottieniRisposteCorrette();
+    /* console.log(this.risposte) */},100) ;
   }
 
   pagina:number = 0
   
   rispostaSelezionata: string = '';
     
+  svuotaRisposte(){
+    this.rs.risposteSelezionate = [];
+  }
   previousQuestion() {
     if (this.pagina > 0) {
       this.pagina = this.pagina - 1;

@@ -2,7 +2,7 @@
 
 <div class="sfondoBianco">
     <div class="contenitorePrincipale">
-        <div routerLink="/test-home" class="logo">
+        <div (click)="svuotaRisposte()" routerLink="/test-home" class="logo">
             <svg width="244" height="134" viewBox="0 0 244 134" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect width="244" height="134" fill="url(#pattern0)"/>
                 <defs>
@@ -25,25 +25,27 @@
 
                     <form>   
                         <p class="domanda">{{domanda}}</p>
-                        <div class="listaRisposte">
-                            
+                        <div class="listaRisposte">                            
                                <label  class="inputRisposte" for="risposta0">A. </label>
                                <input  class="inputRisposte" type="radio" id="risposta0" name="fav_language" value="{{risposte[0]}}" [(ngModel)]="rispostaSelezionata">
                                <label  class="inputRisposte" for="risposta0">{{risposte[0]}}</label>
-                            
                                 <br> 
                                 <label  class="inputRisposte"  for="risposta1">B. </label>
                                <input  class="inputRisposte" type="radio" id="risposta1" name="fav_language" value="{{risposte[1]}}" [(ngModel)]="rispostaSelezionata">
                                <label  class="inputRisposte" for="risposta1">{{risposte[1]}}</label>
-                                <br> 
-
+                                <br>
                                 <label  class="inputRisposte"  for="risposta2">C. </label>
                                <input class="inputRisposte" type="radio" id="risposta2" name="fav_language" value="{{risposte[2]}}" [(ngModel)]="rispostaSelezionata">
                                <label  class="inputRisposte" for="risposta2">{{risposte[2]}}</label>
                                <br> 
                                <label  class="inputRisposte"  for="risposta3">D. </label>
-                               <input type="radio" id="risposta3" name="fav_language" value="{{risposte[3]}}" [(ngModel)]="rispostaSelezionata">
+                               <input  type="radio" id="risposta3" name="fav_language" value="{{risposte[3]}}" [(ngModel)]="rispostaSelezionata">
                                <label  class="inputRisposte" for="risposta3">{{risposte[3]}}</label>
+                               
+                                <!-- Non ha senso ma funziona -->
+                                <input hidden type="radio" id="risposta4" name="fav_language" value="{{risposte[4]}}" [(ngModel)]="rispostaSelezionata">
+                                
+                                
                         </div>
                     </form>
     

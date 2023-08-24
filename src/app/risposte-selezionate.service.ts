@@ -9,15 +9,13 @@ export class RisposteSelezionateService {
   risposteSelezionate: string[] = [];
 
   test:number = 0
-  pagina:number=0
+  pagina:number= 0
   dati:DatiTest[]=[]
   percentualeCorrette:number=0;
 
- 
-
   private ENDPOINT = 'http://localhost:8080/api/test-service/'
   constructor(private http: HttpClient) { 
-    this.ottieniRisposteCorrette();  
+    this.getDati().subscribe((data)=> this.dati = data)  
   }
 
   popLastRisposta() {
@@ -32,13 +30,11 @@ export class RisposteSelezionateService {
      risposteCorrette: string[] = [];
 
     ottieniRisposteCorrette(){
-      
-  
-      for (const test of this.dati) {
-        for (const domanda of test.domande) {
+      this.risposteCorrette = []
+      for (const domanda of this.dati[this.test].domande) {
           this.risposteCorrette.push(domanda.corretta);
         }
-      }
+      console.log(this.risposteCorrette);
     }
  
 
