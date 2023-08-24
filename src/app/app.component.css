@@ -9,6 +9,7 @@
 .logo {
   width: 244px;
   height: 134px;
+  cursor:pointer;
 }
 
 .pulsante-login {
@@ -19,6 +20,7 @@
   background-color: #003f3f00;
   border: 0px;
   cursor: pointer;
+  color: white;
 }
 
 .footer{
@@ -29,6 +31,7 @@
   align-items: end;
   justify-content: center;
   padding-bottom: 20px;
+  color: white;
 }
 
 

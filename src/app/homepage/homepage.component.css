@@ -10,6 +10,7 @@
   font-weight: 400;
   line-height: normal;
   width: 1125px;
+  color: white;
 }
 
 button {
@@ -21,7 +22,7 @@ button {
   border: 0px;
   color: #003f3f;
   font-family: Montserrat;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -34,7 +35,7 @@ button {
 }
 
 .titolo {
-  font-size: 50px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -74,7 +75,7 @@ textarea{
 
 label{
   color: black;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .riga{

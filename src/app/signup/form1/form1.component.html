@@ -1,0 +1,117 @@
+<div>
+  <div class="flex items-center justify-between">
+    <div class="contenitore-steps">
+      <div class="cerchio">
+        1
+      </div>
+      <div class="ps-4 active">
+        Anagrafica
+      </div>
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="contenitore-steps">
+      <div class="cerchio2">
+        2
+      </div>
+      <div class="ps-4 disable">
+        Titoli di studio
+      </div>
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="contenitore-steps">
+      <div class="cerchio2">
+        3
+      </div>
+      <div class="ps-4 disable">
+        Esperienze passate
+      </div>
+    </div>
+
+  </div>
+  <form action="" class="form">
+
+    <!-- Input -->
+    <div class="flex-input">
+      <input type="text" placeholder="Nome" class="input">
+      <input type="text" placeholder="Cognome" class="input">
+    </div>
+    <div class="flex-input">
+      <input type="text" placeholder="Codice Fiscale" class="input">
+      <input type="text" placeholder="Email" class="input">
+    </div>
+    <div class="flex-input">
+      <input type="text" placeholder="Data di nascita" class="input">
+      <input type="text" placeholder="Luogo di nascita" class="input">
+    </div>
+
+    <!-- RadioButton -->
+    <div class="flex align-center justify-between mt-12 radio-section">
+      <div>
+        <b>Cittadinanza:</b>
+      </div>
+      <div class="flex">
+        <div class="pe-10">
+          <input type="radio" name="scelta">
+          <label for="" class="ps-5">Europa</label>
+        </div>
+        <div>
+          <input type="radio" name="scelta">
+          <label for="" class="ps-5">Altro</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div class="flex-input">
+      <input type="text" placeholder="Indirizzo di residenza" class="input">
+      <input type="text" placeholder="Cap residenza" class="input">
+    </div>
+
+    <!-- checkbox -->
+    <div class="flex mt-12">
+      <div>
+        <b>Il dominio coincide con la residenza?</b>
+      </div>
+      <div class="ps-8">
+        <input type="checkbox" name="" id="">
+      </div>
+    </div>
+
+    <!-- input -->
+    <div class="flex-input">
+      <input type="text" placeholder="Indirizzo di domicilio" class="input">
+      <input type="text" placeholder="Cap domicilio" class="input">
+    </div>
+    <div class="flex-input">
+      <input type="text" placeholder="Telefono" class="input">
+      <!-- <input type="text" placeholder="Cognome" class="input"> -->
+      <select name="" id="" class="input">
+        <option value="">Dove ci hai conosciuto?</option>
+        <option value="">Instagram</option>
+        <option value="">Instagram</option>
+      </select>
+    </div>
+
+    <!-- checkbox -->
+    <div class="flex mt-12">
+      <div>
+        <div class="mb-8"> <b>Appartieni ad una categoria protetta?</b></div>
+        <div><b>Condanne civili?</b></div>
+      </div>
+      <div class="flex flex-col ms-8">
+        <input type="checkbox" name="" id="" class="mb-8">
+        <input type="checkbox" name="" id="">
+      </div>
+    </div>
+
+    <!-- button -->
+    <div class="flex items-center justify-end mt-12">
+      <button routerLink="/modulo/form2">Avanti</button>
+    </div>
+
+  </form>
+</div>
