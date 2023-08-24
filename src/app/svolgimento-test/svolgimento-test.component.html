@@ -2,7 +2,7 @@
 
 <div class="sfondoBianco">
     <div class="contenitorePrincipale">
-        <div class="logo">
+        <div routerLink="/test-home" class="logo">
             <svg width="244" height="134" viewBox="0 0 244 134" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect width="244" height="134" fill="url(#pattern0)"/>
                 <defs>
@@ -48,7 +48,7 @@
                     </form>
     
                     <div class="bottoni">
-                        <button (click)="previousQuestion()" class="buttonIndietro" type="button">Indietro</button>
+                        <button *ngIf="pagina >0" (click)="previousQuestion()" class="buttonIndietro" type="button">Indietro</button>
                         <button *ngIf="pagina < 3" (click)="nextQuestion()"  type="button">Avanti</button>
                         <button *ngIf="pagina > 2" (click)="riepilogoButton()" routerLink="/riepilogo-test" type="button">Riepilogo</button>
                     </div>

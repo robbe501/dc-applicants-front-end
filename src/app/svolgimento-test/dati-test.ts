@@ -1,11 +1,11 @@
 
 export interface DatiTest {
-    test_id: number;
+    testId: string;
     tipologia: string;
     domande: {
       domanda: string;
       risposte: string[];
-      risposta_corretta: string;
+      corretta: string;
     }[];
   }
   

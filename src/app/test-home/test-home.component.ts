@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RisposteSelezionateService } from '../risposte-selezionate.service';
 
 @Component({
   selector: 'app-test-home',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class TestHomeComponent {
 
+constructor(private rs:RisposteSelezionateService){
+  
+}
+scegliTest0(){
+  this.rs.test = 0
+}
+scegliTest1(){
+  this.rs.test = 1
+}
+scegliTest2(){
+  this.rs.test = 2
+}
 }
