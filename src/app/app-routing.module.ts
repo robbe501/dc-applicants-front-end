@@ -5,6 +5,7 @@ import { SvolgimentoTestComponent } from './svolgimento-test/svolgimento-test.co
 import { TestHomeComponent } from './test-home/test-home.component';
 
 const routes: Routes = [
+  {path:'', component: TestHomeComponent},
   {path:'test-home', component: TestHomeComponent},
   {path:'svolgimento-test', component: SvolgimentoTestComponent},
   {path:'riepilogo-test', component: RiepilogoTestComponent},

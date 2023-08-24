@@ -5,11 +5,19 @@ import { DatiTest } from './svolgimento-test/dati-test';
   providedIn: 'root'
 })
 export class RisposteSelezionateService {
+
   risposteSelezionate: string[] = [];
+
   test:number = 0
+  pagina:number=0
+  dati:DatiTest[]=[]
+  percentualeCorrette:number=0;
+
+ 
+
   private ENDPOINT = 'http://localhost:8080/api/test-service/'
-   dati:DatiTest[]=[]
-  constructor(private http: HttpClient) {   
+  constructor(private http: HttpClient) { 
+    this.ottieniRisposteCorrette();  
   }
 
   popLastRisposta() {
@@ -20,5 +28,20 @@ export class RisposteSelezionateService {
   getDati() {
      return this.http.get<DatiTest[]>(`${this.ENDPOINT}readAllTests`);
     }
+
+     risposteCorrette: string[] = [];
+
+    ottieniRisposteCorrette(){
+      
+  
+      for (const test of this.dati) {
+        for (const domanda of test.domande) {
+          this.risposteCorrette.push(domanda.corretta);
+        }
+      }
+    }
+ 
+
+
 
 }

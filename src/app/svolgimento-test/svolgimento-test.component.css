@@ -1,6 +1,8 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    margin-top: 0; /* Aggiungi questa linea per rimuovere il margine superiore */
+     margin-left: 0; /* Aggiungi questa linea per rimuovere il margine sinistro */
+     margin-right: 0; /* Aggiungi questa linea per rimuovere il margine destro */
+ 
 }
 .sfondoBianco{
     background-color: white;

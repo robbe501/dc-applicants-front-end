@@ -32,6 +32,7 @@ export class SvolgimentoTestComponent {
       this.domanda = this.dati[this.rs.test].domande[this.pagina].domanda;
       this.risposte = this.dati[this.rs.test].domande[this.pagina].risposte;
       this.rs.popLastRisposta(); // Usa il metodo del servizio per rimuovere l'ultima risposta
+      this.rs.pagina=this.pagina
     }
   }
   
@@ -41,6 +42,7 @@ export class SvolgimentoTestComponent {
       this.domanda = this.dati[this.rs.test].domande[this.pagina].domanda;// Aggiorna il testo della nuova domanda corrente
       this.risposte = this.dati[this.rs.test].domande[this.pagina].risposte; // Aggiorna le risposte corrispondenti alla nuova domanda
       this.aggiungiRisposta(); // Aggiungi la risposta selezionata alla lista
+      this.rs.pagina=this.pagina
     }
   }
     

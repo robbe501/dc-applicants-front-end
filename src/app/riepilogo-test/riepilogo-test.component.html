@@ -27,11 +27,17 @@
                             <h2 class="scrittaRiepilogo">Riepilogo</h2>
                             <div class="listaRisposte">
                               <ng-container *ngFor="let risposta of rs.risposteSelezionate; let i = index">
-                                <p class="domandeRisposte larga">{{ i + 1 }}: {{ risposta }}</p>
+                                <p class="domandeRisposte">{{ i + 1 }}: {{ risposta }}</p>
                               </ng-container>
                             </div>
                             <!-- Rimuovi questo pulsante se il metodo non è definito -->
-                            <button class="buttonIndietro" (click)="svuotaRisposte()" routerLink="/svolgimento-test" type="button">Torna al quiz</button> 
+                            <div class="bottoni">
+                              <button class="buttonIndietro" (click)="svuotaRisposte()" routerLink="/svolgimento-test" type="button">Torna al quiz</button> 
+
+                            <app-popup *ngIf="popupVisible"></app-popup>
+                            <button class="buttonConferma" (click)="conferma(); calcolaPercentualeCorrette();" type="button">Conferma quiz</button> 
+
+                            </div> 
 
                         </div>
                       </form>

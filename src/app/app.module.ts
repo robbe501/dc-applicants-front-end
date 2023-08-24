@@ -10,12 +10,14 @@ import { AppComponent } from './app.component';
 import { RiepilogoTestComponent } from './riepilogo-test/riepilogo-test.component';
 import { SvolgimentoTestComponent } from './svolgimento-test/svolgimento-test.component';
 import { TestHomeComponent } from './test-home/test-home.component';
+import { PopupComponent } from './popup/popup.component';
 @NgModule({
   declarations: [
     AppComponent,
     TestHomeComponent,
     SvolgimentoTestComponent,
     RiepilogoTestComponent,
+    PopupComponent,
     
   ],
   imports: [
