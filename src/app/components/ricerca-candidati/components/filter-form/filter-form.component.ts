@@ -5,6 +5,7 @@ import { FilteredSearchService } from 'src/app/apis/filtered-search.service';
 import { GetEnumService } from 'src/app/apis/get-enum.service';
 import { Enums } from 'src/app/model/enums-model';
 
+
 @Component({
   selector: 'app-filter-form',
   templateUrl: './filter-form.component.html',
@@ -25,13 +26,9 @@ export class FilterFormComponent implements OnInit {
 
   enums: Enums = {
     certificazione: [{ name: ""}],
-
     laurea: [{ name: ""}],
-
     contratto: [{ name: ""}],
-
     diploma: [{ name: ""}],
-
     esito: [{ name: ""}],
   };
 
@@ -67,11 +64,13 @@ export class FilterFormComponent implements OnInit {
     for (const key in formValues) {
       if (formValues[key]) {
         params = params.set(key, formValues[key]);
-        this.filterService.getFiltered(params).subscribe((value) => {
-          console.log(value);
+        this.filterService.getFilteredLight(params).subscribe((value) => {
+          console.log(value, params);
           this.dataReady.emit(value);
         });
       }
     }
   }
 }
+
+

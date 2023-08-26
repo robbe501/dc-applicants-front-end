@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Candidato } from 'src/app/model/candidato-model';
+import { CandidatoLight } from 'src/app/model/candidato-model';
 
 @Component({
   selector: 'app-filter-table',
@@ -8,6 +8,6 @@ import { Candidato } from 'src/app/model/candidato-model';
 })
 export class FilterTableComponent {
 
-  @Input() candidati!: Candidato[];
+  @Input() candidati!: CandidatoLight[];
 
 }

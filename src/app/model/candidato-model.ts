@@ -37,3 +37,10 @@ export interface Candidato {
     nomeReferente?: string | null;
     normativaPrivacy: boolean
   }
+
+  export interface CandidatoLight{
+    nome: string;
+    cognome: string;
+    recapitoMobile: string;
+    esito: string;
+  }

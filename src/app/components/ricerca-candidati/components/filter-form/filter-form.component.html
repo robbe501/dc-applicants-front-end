@@ -1,58 +1,38 @@
-<h1 class="text-3xl font-bold underline">   Hello world! </h1>
+
 <form [formGroup]="filterForm" (ngSubmit)="onSubmit()">
-  <div class="grid lg:grid-cols-4 md:grid-cols-3 mb-6 text-black">
+  <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 mb-6 text-black">
     <div class="p-4">
-        <span class="p-float-label" >
-            <input pInputText id="Nominativo" formControlName="nome" />
-            <label htmlFor="name" >Nominativo</label>
-        </span>
+      <input pInputText type="text" class="p-4" placeholder="Nominativo" formControlName="nome" />
     </div>
     <div class="p-4">
-      <input
-        class="appearance-none border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid"
-        id="grid-last-name"
-        type="text"
-        placeholder="Residenza"
-        formControlName="residenza"
-      />
+      <input pInputText type="text" class="p-4" placeholder="Residenza" formControlName="residenza" />
     </div>
     <div class="p-4">
-        <p-dropdown formControlName="laurea" [options]="enums.laurea" optionLabel="name"></p-dropdown>
+        <p-dropdown formControlName="laurea" [options]="enums.laurea" optionLabel="name" placeholder="Seleziona Laurea"></p-dropdown>
     </div>
     <div class="p-4">
-        <p-dropdown formControlName="diploma" [options]="enums.diploma" optionLabel="name"></p-dropdown>
+        <p-dropdown formControlName="diploma" [options]="enums.diploma" optionLabel="name" placeholder="Seleziona Diploma"></p-dropdown>
 
     </div>
     <div class="p-4">
-      <p-dropdown formControlName="certificazione" [options]="enums.certificazione" optionLabel="name"></p-dropdown>
+      <p-dropdown formControlName="certificazione" [options]="enums.certificazione" optionLabel="name" placeholder="Certificazione"></p-dropdown>
     </div>
     <div class="p-4">
-        <p-dropdown formControlName="contratto" [options]="enums.contratto" optionLabel="name"></p-dropdown>
+        <p-dropdown formControlName="contratto" [options]="enums.contratto" optionLabel="name" placeholder="Tipo Contrato"></p-dropdown>
     </div>
     <div class="p-4">
-      <input
-        class="appearance-none border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid"
-        id="grid-last-name"
-        type="text"
-        placeholder="RAL"
-        formControlName="ral"
-      />
+      <input pInputText type="text" class="p-4" placeholder="RAL" formControlName="ral" />
     </div>
     <div class="p-4">
-      <input
-        class="appearance-none border rounded-t py-3 px-4 leading-tight focus:outline-dotted text-black focus:bg-gray-50 focus:border-teal-500 bg-gray-400 ng-valid"
-        id="grid-last-name"
-        type="text"
-        placeholder="Tariffa"
-        formControlName="tariffaGiornalieraNetta"
-      />
-    </div>
-    <div class="p-4">
-        <p-dropdown formControlName="esitoTest" [options]="enums.esito" optionLabel="name"></p-dropdown>
+      <input pInputText type="text" class="p-4" placeholder="Tariffa" formControlName="tariffaGiornalieraNetta" />
 
     </div>
-    <div class="p-4 lg:col-end-5 md:col-end-2">
-      <button pButton pRipple label="Submit" class="p-button-success"></button>
+    <div class="p-4">
+        <p-dropdown formControlName="esitoTest" [options]="enums.esito" optionLabel="name" placeholder="Esito"></p-dropdown>
+
+    </div>
+    <div class="p-4 lg:col-end-5 md:col-end-3 md:text-center py-5">
+      <button pButton pRipple label="Submit" class="p-button-success px-16"></button>
     </div>
   </div>
 </form>

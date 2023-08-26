@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Candidato } from 'src/app/model/candidato-model';
+import { CandidatoLight } from 'src/app/model/candidato-model';
 
 @Component({
   selector: 'app-ricerca-candidati',
@@ -8,7 +8,7 @@ import { Candidato } from 'src/app/model/candidato-model';
 })
 export class RicercaCandidatiComponent {
 
-  candidati! : Candidato[] ;
+  candidati! : CandidatoLight[] ;
 
   onDataReady(data: any) {
     this.candidati = data;
