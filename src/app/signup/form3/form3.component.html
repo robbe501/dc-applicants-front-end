@@ -20,38 +20,38 @@
     </div>
   </div>
 
-  <form action="" class="form">
+  <form action="" class="form" [formGroup]="formEsperienza" (ngSubmit)="onSubmit">
 
     <!-- input -->
     <div class="flex-input">
-      <input type="text" placeholder="Data conseguimento" class="input"/>
-      <input type="text" placeholder="Data conseguimento" class="input"/>
+      <input type="text" placeholder="Azienda" class="input" formControlName="azienda"/>
+      <input type="date" placeholder="Data inizio" class="input" formControlName="data_inizio"/>
     </div>
 
     <!-- Input -->
     <div class="flex-input">
-      <select name="" id="" class="input">
-        <option value="">Diploma</option>
+      <select name="" id="" class="input" formControlName="qualifica">
+        <option value="">Qualifica</option>
         <option value="">Instagram</option>
         <option value="">Instagram</option>
       </select>
-      <input type="text" placeholder="Data conseguimento" class="input">
+      <input type="text" placeholder="Referente" class="input" formControlName="nome_referente">
     </div>
 
     <!-- Input -->
     <div class="flex-input">
-      <select name="" id="" class="input">
-        <option value="">Diploma</option>
+      <select name="" id="" class="input" formControlName="contratto">
+        <option value="">Tipo di contratto</option>
         <option value="">Instagram</option>
         <option value="">Instagram</option>
       </select>
-      <input type="text" placeholder="Data conseguimento" class="input">
+      <input type="text" placeholder="RAL / Specifica contratto / Tariffa giornaliera " class="input">
     </div>
 
     <!-- checkbox -->
     <div class="flex mt-12">
       <div class="pe-8">
-        <input type="checkbox" name="" id="">
+        <input type="checkbox" name="" id="" formControlName="normativa_privacy">
       </div>
       <div>
         <b>Spuntando la casella accetti le <a href="">Normative della privacy</a></b>
@@ -60,7 +60,7 @@
     </div>
 
     <div class="flex items-center justify-end mt-12">
-      <button routerLink="">Termina</button>
+      <button >Termina</button>
     </div>
 
 

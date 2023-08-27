@@ -34,22 +34,23 @@
 
   </div>
 
-  <form action="" class="form">
+  <form action="" class="form" [formGroup]="formTitoli" (ngSubmit)="onSubmit()">
 
     <!-- Input -->
     <div class="flex-input">
-      <select name="" id="" class="input">
-        <option value="">Diploma</option>
-        <option value="">Instagram</option>
-        <option value="">Instagram</option>
-      </select>
-      <input type="text" placeholder="Data conseguimento" class="input">
+      <!-- <select name="" id="" class="input" formControlName="laurea">
+        <option value="diploma">Diploma</option>
+        <option value="laurea">laurea</option>
+        <option value="senza studi">senza studi</option>
+      </select> -->
+      <input type="text" class="input" formControlName="diploma" placeholder="Diploma" >
+      <input type="date" placeholder="Data conseguimento" class="input" formControlName="data_diploma">
     </div>
 
     <!-- checkbox -->
     <div class="flex mt-12">
       <div>
-        <b>Il dominio coincide con la residenza?</b>
+        <b>Hai conseguito una laurea?</b>
       </div>
       <div class="ps-8">
         <input type="checkbox" name="" id="">
@@ -58,18 +59,14 @@
 
     <!-- Input -->
     <div class="flex-input">
-      <select name="" id="" class="input">
-        <option value="">Diploma</option>
-        <option value="">Instagram</option>
-        <option value="">Instagram</option>
-      </select>
-      <input type="text" placeholder="Data conseguimento" class="input">
+      <input type="text" class="input" formControlName="laurea" placeholder="Laurea">
+      <input type="date" placeholder="Data conseguimento" class="input" formControlName="anno_laurea">
     </div>
 
     <!-- checkbox -->
     <div class="flex mt-12">
       <div>
-        <b>Il dominio coincide con la residenza?</b>
+        <b>Stai conseguendo una laurea?</b>
       </div>
       <div class="ps-8">
         <input type="checkbox" name="" id="">
@@ -78,17 +75,13 @@
 
     <!-- Input -->
     <div class="flex-input">
-      <select name="" id="" class="input">
-        <option value="">Diploma</option>
-        <option value="">Instagram</option>
-        <option value="">Instagram</option>
-      </select>
+      <input type="text" class="input" placeholder="Laurea" formControlName="laurea_in_corso">
     </div>
 
     <!-- checkbox -->
     <div class="flex mt-12">
       <div>
-        <b>Il dominio coincide con la residenza?</b>
+        <b>Hai conseguito una certificzione?</b>
       </div>
       <div class="ps-8">
         <input type="checkbox" name="" id="">
@@ -97,16 +90,12 @@
 
     <!-- Input -->
     <div class="flex-input">
-      <select name="" id="" class="input">
-        <option value="">Diploma</option>
-        <option value="">Instagram</option>
-        <option value="">Instagram</option>
-      </select>
-      <input type="text" placeholder="Data conseguimento" class="input">
+      <input type="text" class="input" formControlName="certificazione" placeholder="Certificazione">
+      <input type="date" placeholder="Data di scadenza" class="input" formControlName="data_scadenza">
     </div>
 
     <div class="flex items-center justify-end mt-12">
-      <button routerLink="/modulo/form3">Avanti</button>
+      <button type="submit">Avanti</button>
     </div>
 
   </form>

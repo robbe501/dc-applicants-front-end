@@ -1,5 +1,5 @@
 <div>
-  <div class="flex items-center justify-between">
+  <div class=" flex items-center justify-between">
     <div class="contenitore-steps">
       <div class="cerchio">
         1
@@ -32,20 +32,22 @@
     </div>
 
   </div>
-  <form action="" class="form">
+
+
+  <form action="" class="form" [formGroup]="formAnagrafica" (ngSubmit)="onSubmit()">
 
     <!-- Input -->
     <div class="flex-input">
-      <input type="text" placeholder="Nome" class="input">
-      <input type="text" placeholder="Cognome" class="input">
+      <input type="text" placeholder="Nome" class="input" formControlName="nome">
+      <input type="text" placeholder="Cognome" class="input" formControlName="cognome">
     </div>
     <div class="flex-input">
-      <input type="text" placeholder="Codice Fiscale" class="input">
-      <input type="text" placeholder="Email" class="input">
+      <input type="text" placeholder="Codice Fiscale" class="input" formControlName="codice_fiscale">
+      <input type="text" placeholder="Email" class="input" formControlName="email">
     </div>
     <div class="flex-input">
-      <input type="text" placeholder="Data di nascita" class="input">
-      <input type="text" placeholder="Luogo di nascita" class="input">
+      <input type="date" placeholder="Data di nascita" class="input" formControlName="data_nascita">
+      <input type="text" placeholder="Luogo di nascita" class="input" formControlName="luogo_nascita">
     </div>
 
     <!-- RadioButton -->
@@ -55,11 +57,11 @@
       </div>
       <div class="flex">
         <div class="pe-10">
-          <input type="radio" name="scelta">
+          <input type="radio" name="cittadinanza" formControlName="cittadinanza" value=1 >
           <label for="" class="ps-5">Europa</label>
         </div>
         <div>
-          <input type="radio" name="scelta">
+          <input type="radio" name="cittadinanza" value=0 formControlName="cittadinanza">
           <label for="" class="ps-5">Altro</label>
         </div>
       </div>
@@ -67,8 +69,8 @@
 
     <!-- Input -->
     <div class="flex-input">
-      <input type="text" placeholder="Indirizzo di residenza" class="input">
-      <input type="text" placeholder="Cap residenza" class="input">
+      <input type="text" placeholder="Indirizzo di residenza" class="input" formControlName="residenza">
+      <input type="text" placeholder="Cap residenza" class="input" formControlName="cap_residenza">
     </div>
 
     <!-- checkbox -->
@@ -77,22 +79,22 @@
         <b>Il dominio coincide con la residenza?</b>
       </div>
       <div class="ps-8">
-        <input type="checkbox" name="" id="">
+        <input type="checkbox"  name="" id="" (change)="isTrueorFalse($event.target)">
       </div>
     </div>
 
     <!-- input -->
     <div class="flex-input">
-      <input type="text" placeholder="Indirizzo di domicilio" class="input">
-      <input type="text" placeholder="Cap domicilio" class="input">
+      <input type="text" placeholder="Indirizzo di domicilio" class="input" formControlName="domicilio" [class.disabled]="checked">
+      <input type="text" placeholder="Cap domicilio" class="input" formControlName="cap_domicilio" [class.disabled]="checked">
     </div>
     <div class="flex-input">
-      <input type="text" placeholder="Telefono" class="input">
+      <input type="text" placeholder="Telefono" class="input" formControlName="recapito_mobile">
       <!-- <input type="text" placeholder="Cognome" class="input"> -->
-      <select name="" id="" class="input">
-        <option value="">Dove ci hai conosciuto?</option>
-        <option value="">Instagram</option>
-        <option value="">Instagram</option>
+      <select name="" id="" class="input" formControlName="come_conosciuto">
+        <option value="cd">Dove ci hai conosciuto?</option>
+        <option value="insta">Instagram</option>
+        <option value="ciao">Instagram</option>
       </select>
     </div>
 
@@ -103,14 +105,14 @@
         <div><b>Condanne civili?</b></div>
       </div>
       <div class="flex flex-col ms-8">
-        <input type="checkbox" name="" id="" class="mb-8">
-        <input type="checkbox" name="" id="">
+        <input type="checkbox" name="" id="" class="mb-8" formControlName="categoria_protetta">
+        <input type="checkbox" name="" id="" formControlName="condanne_civili">
       </div>
     </div>
 
     <!-- button -->
     <div class="flex items-center justify-end mt-12">
-      <button routerLink="/modulo/form2">Avanti</button>
+      <button type="">Avanti</button>
     </div>
 
   </form>

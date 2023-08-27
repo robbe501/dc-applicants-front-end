@@ -6,7 +6,7 @@ import { ButtonModule } from 'primeng/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { ModuloComponent } from './signup/signup.component';
+import { SignupComponent } from './signup/signup.component';
 
 import { TabViewModule } from 'primeng/tabview';
 import { StepsModule } from 'primeng/steps';
@@ -17,12 +17,16 @@ import { Form1Component } from './signup/form1/form1.component';
 import { Form2Component } from './signup/form2/form2.component';
 import { Form3Component } from './signup/form3/form3.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    ModuloComponent,
+    SignupComponent,
     Form1Component,
     Form2Component,
     Form3Component
@@ -34,7 +38,9 @@ import { Form3Component } from './signup/form3/form3.component';
     ButtonModule,
     TabViewModule,
     StepsModule,
-    ToastModule
+    ToastModule,
+    ReactiveFormsModule,
+    FormsModule
 
   ],
   providers: [RegistrationService],
